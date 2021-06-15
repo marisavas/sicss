@@ -16,3 +16,12 @@ page <- "https://piaui.folha.uol.com.br/lupa/2021/06/14/verificamos-washington-p
 page %>%
   read_html() %>%
   html_text("p/span")
+
+# código Beatriz Milz
+
+library(magrittr)
+"https://piaui.folha.uol.com.br/lupa/2020/12/" %>% 
+  rvest::read_html() %>%
+  rvest::html_nodes("h2") %>% 
+  rvest::html_text()
+
